@@ -10,6 +10,7 @@ from mlflow.tracking import MlflowClient
 from TaxiFareModel.data import get_data, clean_data
 from TaxiFareModel.encoders import DistanceTransformer, TimeFeaturesEncoder
 from TaxiFareModel.utils import compute_rmse
+from TaxiFareModel.Makefile import save_model
 
 
 class Trainer():
@@ -49,6 +50,10 @@ class Trainer():
         """set and train the pipeline"""
 
         self.pipeline.fit(self.X, self.y)
+
+    def save_model:
+        make save_model
+
 
 
     def evaluate(self, X_test, y_test):
